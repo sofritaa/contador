@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador</title>
+</head>
+<body>
+    <h1>Número de visitas: {{ visits }}</h1>
+    <h2>Contador: {{ counter }}</h2>
+
+    <form action="{{ url_for('increment') }}" method="POST">
+        <input type="number" name="increment" value="1">
+        <button type="submit">Incrementar</button>
+    </form>
+
+    <form action="{{ url_for('reset') }}" method="GET">
+        <button type="submit">Reiniciar contador</button>
+    </form>
+</body>
+</html>
